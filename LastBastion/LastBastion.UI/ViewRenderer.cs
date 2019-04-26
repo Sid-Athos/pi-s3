@@ -9,7 +9,7 @@ namespace test
 {
     class ViewRenderer : View
     {
-        WindowRenderer _window;
+        View _view;
 
         Vector2f _dim;
         Vector2f _pos;
@@ -19,9 +19,9 @@ namespace test
         float _XPos;
         float _YPos;
 
-        public ViewRenderer(WindowRenderer window,float Xdim, float Ydim, float XPos, float YPos) : base (new Vector2f(100, 100), new Vector2f(200, 200))
+        public ViewRenderer(WindowRenderer window,float Xdim, float Ydim, float XPos, float YPos)
         {
-            _window = window;
+            _view = new View(new Vector2f(100, 100), new Vector2f(200, 200);
             _XDim = 200;
             _YDim = 200;
             _XPos = 100;

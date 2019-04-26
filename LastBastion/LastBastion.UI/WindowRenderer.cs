@@ -7,46 +7,35 @@ using SFML.Window;
 //{}
 namespace test
 {
-    class WindowRenderer : RenderWindow
+    class WindowRenderer
     {
-        Map _map;
+        RenderWindow _window;
 
-        uint _height;
-        uint _width;
+        Map _map;
         string _title;
 
         ViewRenderer _view0;
 
         Dictionary<Styles, bool> _styles;
-        Dictionary<int, ViewRenderer> _views;
 
         public WindowRenderer(uint height, uint width, string title)
-            : base (new VideoMode(width,height), title, Styles.Default)
         {
-            _height = height;
-            _width = width;
-            _title = title;
-
+            _window = new RenderWindow(new VideoMode(width, height), title, Styles.Default);
             //SetDStyles();
-
             _map = new Map(this);
-            _views = new Dictionary<int, ViewRenderer>();
             _view0 = NewView();
-            
-
         }
 
         public ViewRenderer NewView()
         {
             ViewRenderer newV = new ViewRenderer(this,1f,1f,_map.MapWidth(),_map.MapHeight());
-            if (!_views.ContainsKey(0))
-            {
-                _views.Add(0, newV);
-            }
             return newV;
         }
 
-        public ViewRenderer GetViews => _view0;
+        public Map GetMap
+        {
+            get { return _map; }
+        }
 
         /*
         public void SetDStyles()
@@ -74,10 +63,6 @@ namespace test
             }
         }
         */
-        public Map GetMap
-        {
-            get { return _map; }
-        }
     }
 }
 
