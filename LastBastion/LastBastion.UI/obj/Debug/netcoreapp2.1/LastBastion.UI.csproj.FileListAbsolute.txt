@@ -6,3 +6,6 @@ C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\bin\Debug\net
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.runtimeconfig.json
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.runtimeconfig.dev.json
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.dll
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.pdb
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.dll
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.pdb

@@ -13,7 +13,7 @@ namespace LastBastion.Model
         readonly uint _armor = 0;                        // each armor point reduces damages by 10%.
         bool _isMoving = false;
         uint _aaCooldown = 2;                // AutoAttacks cooldown
-        float _speed = 1.0;
+        float _speed = 1.0f;
 
         uint _harvestCooldown = 3;
 

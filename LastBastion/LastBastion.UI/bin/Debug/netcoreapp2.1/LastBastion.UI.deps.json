@@ -1,17 +1,29 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "558c706e0710a727806e477f8adccc0e5cd352b6"
+    "signature": "d10a2966c17be6ff403ea5553d4b3d841af91723"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "LastBastion.UI/1.0.0": {
         "dependencies": {
+          "ITI.SFML.Audio": "0.1.0",
           "ITI.SFML.Graphics": "0.1.0"
         },
         "runtime": {
           "LastBastion.UI.dll": {}
+        }
+      },
+      "ITI.SFML.Audio/0.1.0": {
+        "dependencies": {
+          "ITI.SFML.System": "0.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ITI.SFML.Audio.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.0.24416.53026"
+          }
         }
       },
       "ITI.SFML.Graphics/0.1.0": {
@@ -52,6 +64,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ITI.SFML.Audio/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z8xKugCvc9iVgcWv/abgBN6jZZnbeHkD4bn1gPS7YBzVSRZAmC+NGg6JknHsSaQoqNxt3L7bv+0UApiyLwMxGA==",
+      "path": "iti.sfml.audio/0.1.0",
+      "hashPath": "iti.sfml.audio.0.1.0.nupkg.sha512"
     },
     "ITI.SFML.Graphics/0.1.0": {
       "type": "package",
