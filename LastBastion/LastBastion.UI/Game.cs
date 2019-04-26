@@ -14,8 +14,7 @@ namespace test
 
         WindowRenderer _window;
         Input _input;
-
-        ViewRenderer _view0;
+        
 
         public void Run()
         {
@@ -24,23 +23,25 @@ namespace test
 
             _input = new Input(this);
             _window = new WindowRenderer(VideoMode.DesktopMode.Height/2,VideoMode.DesktopMode.Width/2,_name);
-
-            _window.KeyPressed += _input.IsKeyPressed;
+            
+            _window.GetWindow.KeyPressed += _input.IsKeyPressed;
+            //Console.WriteLine(_window.GetViewRenderer.GetDim.X);
             
             Gameloop();
         }
 
         public void Gameloop()
         {
-            while (_window.IsOpen)
+            while (_window.GetWindow.IsOpen)
             {
-                _window.DispatchEvents();
-                _window.Clear();
+                _window.GetWindow.DispatchEvents();
+                _window.GetWindow.Clear();
 
-                _window.GetMap.PrintMap();
-                _window.View = _window.GetViews;
+                _window.GetMap.PrintMap(50,50);
+                _window.GetWindow.View = _window.GetViewRenderer.GetView;
+                _window.GetMap.PrintCursor();
 
-                _window.Display();
+                _window.GetWindow.Display();
             }
 
         }
@@ -52,7 +53,7 @@ namespace test
 
         public void Close()
         {
-            _window.Close();
+            _window.GetWindow.Close();
         }
     }
 }

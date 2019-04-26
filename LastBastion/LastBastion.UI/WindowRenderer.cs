@@ -36,6 +36,14 @@ namespace test
         {
             get { return _map; }
         }
+        public RenderWindow GetWindow
+        {
+            get { return _window; }
+        }
+        public ViewRenderer GetViewRenderer
+        {
+            get { return _view0; }
+        }
 
         /*
         public void SetDStyles()

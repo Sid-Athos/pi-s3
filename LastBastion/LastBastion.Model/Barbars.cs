@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*
 namespace LastBastion.Model
 {
     public class Barbars : Units
@@ -44,3 +44,4 @@ namespace LastBastion.Model
         public bool IsMoving => _isMoving;
     }
 }
+*/
