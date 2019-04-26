@@ -8,13 +8,11 @@ namespace LastBastion.Model
     {
         static uint _count;
         uint _lifePoints = 30;
-        static uint _count;
         readonly uint _dmg = 5;
         bool _attackable;
         readonly uint _armor = 0;                        // each armor point reduces damages by 10%.
         bool _isMoving = false;
         uint _aaCooldown = 3;                // AutoAttacks cooldown
-        Barbars[] _slots;
         float _speed = 1.0;
 
         public Barbar()
@@ -24,7 +22,7 @@ namespace LastBastion.Model
             _attackable = true;
         }
 
-        public void Attack(var unit)
+        public void Attack(Units unit)
         {
             unit._lifePoints = unit._lifePoints - (_dmg - unit.armor);
         }
