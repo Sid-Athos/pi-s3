@@ -7,8 +7,8 @@ namespace LastBastion.Model
     {
         float _posX;
         float _posY;
-        List<Villager> _villagePeople = new List<Villager>;
-        List<Barbars> _barbarians = new List<Barbars>;
+        List<Villagers> _villagePeople = new List<Villagers>();
+        List<Barbars> _barbarians = new List<Barbars>();
         public bool _flying;
         Map _context;
 
@@ -21,8 +21,8 @@ namespace LastBastion.Model
             _flying = flying;
         }
 
-        public uint BarbCount => _barbarians.Count;
+        public int BarbCount => _barbarians.Count;
 
-        public uint VillagerCount => _villager.Count;
+        public int VillagerCount => _villagePeople.Count;
     }
 }
