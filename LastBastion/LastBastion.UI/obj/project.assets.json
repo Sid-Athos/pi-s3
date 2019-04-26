@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sidbe\\source\\repos\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
+      "projectUniqueName": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
       "projectName": "LastBastion.UI",
-      "projectPath": "C:\\Users\\sidbe\\source\\repos\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
+      "projectPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
       "packagesPath": "C:\\Users\\sidbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sidbe\\source\\repos\\LastBastion\\LastBastion.UI\\obj\\",
+      "outputPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
