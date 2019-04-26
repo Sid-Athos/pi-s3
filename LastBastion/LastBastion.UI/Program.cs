@@ -1,12 +1,16 @@
 ﻿using System;
+using SFML.Graphics;
+using SFML.System;
+using SFML.Window;
 
-namespace LastBastion.UI
+namespace test
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game _game = new Game();
+            _game.Run();
         }
     }
 }
