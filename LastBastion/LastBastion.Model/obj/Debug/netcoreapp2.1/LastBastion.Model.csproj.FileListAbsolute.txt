@@ -4,7 +4,6 @@ C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.csproj.CoreCompileInputs.cache
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.AssemblyInfoInputs.cache
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.AssemblyInfo.cs
-C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.csprojAssemblyReference.cache
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.csproj.CoreCompileInputs.cache
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.AssemblyInfoInputs.cache
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.AssemblyInfo.cs

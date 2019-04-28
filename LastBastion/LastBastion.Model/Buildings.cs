@@ -49,5 +49,19 @@ namespace LastBastion.Model
         }
 
         public uint MaxLife => _maxLifePoints;
+
+        public void Attack(Units unit)
+        {
+
+            if (_dmg > unit.Life)
+            {
+                unit.Attacked(0);
+                unit.Die();
+                return;
+            }
+
+            unit.Attacked(Math.Max(unit.Life - (_dmg - unit.Armor), 0));
+        }
+
     }
 }

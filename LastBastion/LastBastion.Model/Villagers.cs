@@ -6,8 +6,6 @@ namespace LastBastion.Model
 {
     public class Villagers : Units
     {
-        
-
         uint _harvestCooldown = 3;
 
         public Villagers(bool flying, float posX, float posY,
@@ -19,8 +17,6 @@ namespace LastBastion.Model
         {
         }
 
-        //public uint Count => _count;
-
-        //public string Jobs => _job;
+        public uint HarvestCd => _harvestCooldown;
     }
 }

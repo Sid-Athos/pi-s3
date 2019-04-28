@@ -253,6 +253,20 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "LastBastion.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "ITI.SFML.Audio": "0.1.0",
+          "ITI.SFML.Graphics": "0.1.0"
+        },
+        "compile": {
+          "bin/placeholder/LastBastion.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LastBastion.Model.dll": {}
+        }
       }
     }
   },
@@ -780,12 +794,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "LastBastion.Model/1.0.0": {
+      "type": "project",
+      "path": "../LastBastion.Model/LastBastion.Model.csproj",
+      "msbuildProject": "../LastBastion.Model/LastBastion.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "ITI.SFML.Audio >= 0.1.0",
-      "ITI.SFML.Graphics >= 0.1.0",
+      "LastBastion.Model >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -796,11 +814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
-      "projectName": "LastBastion.Model",
-      "projectPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "projectUniqueName": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\TestsWhileNoUnitTests.UI\\TestsWhileNoUnitTests.UI.csproj",
+      "projectName": "TestsWhileNoUnitTests.UI",
+      "projectPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\TestsWhileNoUnitTests.UI\\TestsWhileNoUnitTests.UI.csproj",
       "packagesPath": "C:\\Users\\sidbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\obj\\",
+      "outputPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\TestsWhileNoUnitTests.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -818,7 +836,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj": {
+              "projectPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -830,16 +852,7 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "ITI.SFML.Audio": {
-            "target": "Package",
-            "version": "[0.1.0, )"
-          },
-          "ITI.SFML.Graphics": {
-            "target": "Package",
-            "version": "[0.1.0, )"
-          },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
