@@ -12,11 +12,13 @@ namespace test
     {
         Vector2f _pos;
         String _name;
+        string _building;  
 
         public Hut(Vector2f pos, string name)
         {
             _pos = pos;
             _name = name;
+            _building = "Empty";
         }
 
         public Vector2f GetVecHut
@@ -26,6 +28,18 @@ namespace test
         public String GetName
         {
             get { return _name; }
+        }
+        public bool IsBusy()
+        {
+            if (_building == "Empty")
+            {
+                return true;
+            }
+            return false;
+        }
+        public void SetBuilding(string a)
+        {
+            _building = a;
         }
     }
 }

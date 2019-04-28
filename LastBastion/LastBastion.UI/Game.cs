@@ -38,6 +38,7 @@ namespace test
                 _window.GetWindow.Clear();
 
                 _window.GetMap.PrintMap(50,50);
+                _window.GetMap.GetVillage.DrawCastle();
                 _window.GetWindow.View = _window.GetViewRenderer.GetView;
                 _window.GetMap.PrintCursor();
                 

@@ -12,6 +12,7 @@ namespace test
     {
         WindowRenderer _window;
         Sprite _sprite;
+        Village _village;
 
         Sprite _tile;
 
@@ -53,6 +54,7 @@ namespace test
             texture = new Texture("../../../../images/CursorBoard.png");
             _CurseBoard = new Sprite(texture);
 
+            _village = new Village(this, _grid, _window);
         }
 
         public void PrintMap()
@@ -78,6 +80,10 @@ namespace test
         public WindowRenderer GetWindow
         {
             get { return _window; }
+        }
+        public Village GetVillage
+        {
+            get { return _village; }
         }
         public uint MapHeight() => _height;
         public uint MapWidth() => _width;
