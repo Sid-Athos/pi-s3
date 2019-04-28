@@ -33,6 +33,7 @@ namespace test
             _YPos = 0;
 
             _dim = new Vector2f(_XDim, _YDim);
+            Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
         }
         public View GetView => _view;
         public void ViewUp()
@@ -42,6 +43,7 @@ namespace test
                 _YPos -= 1;
                 _pos = new Vector2i(_XPos, _YPos);
                 _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
         public void ViewDown()
@@ -51,6 +53,7 @@ namespace test
                 _YPos += 1;
                 _pos = new Vector2i(_XPos, _YPos);
                 _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
         public void ViewRight()
@@ -60,6 +63,7 @@ namespace test
                 _XPos += 1;
                 _pos = new Vector2i(_XPos, _YPos);
                 _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
         public void ViewLeft()
@@ -69,6 +73,7 @@ namespace test
                 _XPos -= 1;
                 _pos = new Vector2i(_XPos, _YPos);
                 _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
         public void zoom()

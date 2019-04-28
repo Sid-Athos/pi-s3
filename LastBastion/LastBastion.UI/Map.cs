@@ -69,7 +69,7 @@ namespace test
         }
         public void PrintCursor()
         {
-            _Curse.Position = _window.GetViewRenderer.GetView.Center;
+            //_Curse.Position = _window.GetViewRenderer.GetView.Center;
             _CurseFont.Position = _window.GetViewRenderer.GetView.Center;
             _CurseBoard.Position = _window.GetViewRenderer.GetView.Center;
             _window.GetWindow.Draw(_CurseFont);
@@ -87,12 +87,12 @@ namespace test
         public void CreateGrid(int x, int y)
         {
             int l = -1*(x/2);
-            for (int i = 0; i < 460; i += 10)
+            for (float i = 7.5f; i < 50 * 15; i += 15)
             {
                 int h = -1*(y/2);
-                for (int j = 0; j < 320; j += 10)
+                for (float j = 7.5f; j < 50 * 15; j += 15)
                 {
-                    Hut NewH = new Hut(new Vector2f(i+7.5f,j+7.5f));
+                    Hut NewH = new Hut(new Vector2f(i,j), "[ " +l + " ; " + h + " ]");
                     _grid.Add(new Vector2i(l,h), NewH);
                     h++;
                 }
