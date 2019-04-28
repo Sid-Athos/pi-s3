@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*
 namespace LastBastion.Model
 {
     public class Towers
@@ -57,3 +57,4 @@ namespace LastBastion.Model
         }
     }
 }
+*/

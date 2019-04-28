@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+/*
 namespace LastBastion.Model
 {
     public abstract class Units
@@ -10,7 +10,7 @@ namespace LastBastion.Model
         List<Villagers> _villagePeople = new List<Villagers>();
         List<Barbars> _barbarians = new List<Barbars>();
         public bool _flying;
-        Map _context;
+        //Map _context;
 
         public bool _burned = false;
         public bool _paralyzed = false;
@@ -26,3 +26,4 @@ namespace LastBastion.Model
         public int VillagerCount => _villagePeople.Count;
     }
 }
+*/
