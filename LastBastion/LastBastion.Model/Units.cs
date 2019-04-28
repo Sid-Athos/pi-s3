@@ -3,26 +3,58 @@ using System.Collections.Generic;
 
 namespace LastBastion.Model
 {
-    public abstract class Units
+    public class Units
     {
+        //Map _context;
+        public bool _flying;
         float _posX;
         float _posY;
-        List<Villager> _villagePeople = new List<Villager>;
-        List<Barbars> _barbarians = new List<Barbars>;
-        public bool _flying;
-        Map _context;
-
+        readonly string _job;
+        uint _lifePoints;
+        uint _maxLifePoints;
+        readonly uint _dmg;
+        readonly uint _armor;                        // each armor point reduces damages by 10%.
+        bool _isMoving;
+        uint _aaCooldown;                // AutoAttacks cooldown
+        float _speed;
+        static List<Villagers> _villagePeople = new List<Villagers>();
+        static List<Barbars> _barbarians = new List<Barbars>();
         public bool _burned = false;
         public bool _paralyzed = false;
 
-        public Units(Map context, bool flying, float posX, float posY)
+        public Units(bool flying, float posX, float posY, 
+            string job, uint lifePoints, uint dmg, uint armor, bool isMoving, 
+            uint attackCooldown, float speed)
         {
-            _context = context;
+            //_context = context;
             _flying = flying;
+            _posX = posX;
+            _posY = posY;
+            _job = job;
+            _lifePoints = lifePoints;
+            _maxLifePoints = lifePoints;
+            _dmg = dmg;
+            _armor = armor;
+            _isMoving = isMoving;
+            _aaCooldown = attackCooldown;
+            _speed = speed;
         }
 
-        public uint BarbCount => _barbarians.Count;
+        public void Attack(Units unit)
+        {
+            unit._lifePoints = unit._lifePoints - (_dmg - unit._armor);
+        }
 
-        public uint VillagerCount => _villager.Count;
+        public int BarbCount => _barbarians.Count;
+
+        public int VillagerCount => _villagePeople.Count;
+
+        public uint Dmg => _dmg;
+
+        public uint Armor => _armor;
+
+        public bool IsMoving => _isMoving;
+
+        public string Job => _job;
     }
 }
