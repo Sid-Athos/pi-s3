@@ -790,24 +790,41 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\abidi\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\sidbe\\.nuget\\packages\\": {},
+>>>>>>> 8064cfb68fb737a47a8fe248559d0520d8898d3b
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
       "projectName": "LastBastion.Model",
       "projectPath": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
       "packagesPath": "C:\\Users\\abidi\\.nuget\\packages\\",
       "outputPath": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion.Model\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "projectName": "LastBastion.Model",
+      "projectPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "packagesPath": "C:\\Users\\sidbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\LastBastion.Model\\obj\\",
+>>>>>>> 8064cfb68fb737a47a8fe248559d0520d8898d3b
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\LastBastion\\pi-s3\\LastBastion\\NuGet.Config",
         "C:\\Users\\abidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\sidbe\\source\\repos\\pi-s3\\LastBastion\\NuGet.Config",
+        "C:\\Users\\sidbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 8064cfb68fb737a47a8fe248559d0520d8898d3b
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
