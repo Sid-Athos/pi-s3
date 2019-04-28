@@ -169,31 +169,19 @@ namespace test
                     break;
                 case Keyboard.Key.Left:
                 case Keyboard.Key.Q:
-                    if (_game.GetWindow.GetViewRenderer.GetView.Center.X - _game.GetWindow .GetViewRenderer.GetDim.X/2 >= 0f)
-                    {
-                        _game.GetWindow.GetViewRenderer.ViewLeft();
-                    }
+                    _game.GetWindow.GetViewRenderer.ViewLeft();
                     break;
                 case Keyboard.Key.Right:
                 case Keyboard.Key.D:
-                    if (_game.GetWindow.GetViewRenderer.GetView.Center.X + _game.GetWindow.GetViewRenderer.GetDim.X / 2 <= _game.GetWindow.GetMap.MapWidth())
-                    {
-                        _game.GetWindow.GetViewRenderer.ViewRight();
-                    }
+                    _game.GetWindow.GetViewRenderer.ViewRight();
                     break;
                 case Keyboard.Key.Up:
                 case Keyboard.Key.Z:
-                    if (_game.GetWindow.GetViewRenderer.GetView.Center.Y - _game.GetWindow.GetViewRenderer.GetDim.Y / 2 >= 0f)
-                    {
-                        _game.GetWindow.GetViewRenderer.ViewUp();
-                    }
+                    _game.GetWindow.GetViewRenderer.ViewUp();
                     break;
                 case Keyboard.Key.Down:
                 case Keyboard.Key.S:
-                    if (_game.GetWindow.GetViewRenderer.GetView.Center.Y + _game.GetWindow.GetViewRenderer.GetDim.Y / 2 <= _game.GetWindow.GetMap.MapHeight())
-                    {
-                        _game.GetWindow.GetViewRenderer.ViewDown();
-                    }
+                    _game.GetWindow.GetViewRenderer.ViewDown();
                     break;
                 case Keyboard.Key.F1:
                     break;

@@ -16,6 +16,8 @@ namespace test
         Sprite _tile;
 
         Sprite _Curse;
+        Sprite _CurseFont;
+        Sprite _CurseBoard;
 
         uint _width;
         uint _height;
@@ -43,6 +45,14 @@ namespace test
             texture = new Texture("../../../../images/wood.png");
             _Curse = new Sprite(texture);
             _Curse.Color = new Color(30, 144, 255, 128);
+
+            texture = new Texture("../../../../images/CursorFont.png");
+            _CurseFont = new Sprite(texture);
+            _CurseFont.Color = new Color(30, 144, 255, 128);
+
+            texture = new Texture("../../../../images/CursorBoard.png");
+            _CurseBoard = new Sprite(texture);
+
         }
 
         public void PrintMap()
@@ -60,7 +70,10 @@ namespace test
         public void PrintCursor()
         {
             _Curse.Position = _window.GetViewRenderer.GetView.Center;
-            _window.GetWindow.Draw(_Curse);
+            _CurseFont.Position = _window.GetViewRenderer.GetView.Center;
+            _CurseBoard.Position = _window.GetViewRenderer.GetView.Center;
+            _window.GetWindow.Draw(_CurseFont);
+            _window.GetWindow.Draw(_CurseBoard);
         }
         public WindowRenderer GetWindow
         {
@@ -68,6 +81,8 @@ namespace test
         }
         public uint MapHeight() => _height;
         public uint MapWidth() => _width;
+
+        public Dictionary<Vector2i, Hut> GetGrid() => _grid;
 
         public void CreateGrid(int x, int y)
         {
@@ -77,7 +92,7 @@ namespace test
                 int h = -1*(y/2);
                 for (int j = 0; j < 320; j += 10)
                 {
-                    Hut NewH = new Hut(new Vector2f(i+5.5f,j+5.5f));
+                    Hut NewH = new Hut(new Vector2f(i+7.5f,j+7.5f));
                     _grid.Add(new Vector2i(l,h), NewH);
                     h++;
                 }

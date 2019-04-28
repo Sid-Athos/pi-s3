@@ -10,7 +10,7 @@ namespace test
 {
     class Game
     {
-        string _name = "MY Litle Test";
+        string _name = "Last Bastion";
 
         WindowRenderer _window;
         Input _input;
@@ -18,8 +18,8 @@ namespace test
 
         public void Run()
         {
-            SFML.WindowNative.Load();
-            SFML.GraphicsNative.Load();
+            //SFML.WindowNative.Load();
+            //SFML.GraphicsNative.Load();
 
             _input = new Input(this);
             _window = new WindowRenderer(VideoMode.DesktopMode.Height/2,VideoMode.DesktopMode.Width/2,_name);
@@ -40,7 +40,7 @@ namespace test
                 _window.GetMap.PrintMap(50,50);
                 _window.GetWindow.View = _window.GetViewRenderer.GetView;
                 _window.GetMap.PrintCursor();
-
+                
                 _window.GetWindow.Display();
             }
 
