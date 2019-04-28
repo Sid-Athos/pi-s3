@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v2.1": {
       "TestsWhileNoUnitTests.UI/1.0.0": {
         "dependencies": {
+          "ITI.SFML.Audio": "0.1.0",
           "LastBastion.Model": "1.0.0"
         },
         "runtime": {

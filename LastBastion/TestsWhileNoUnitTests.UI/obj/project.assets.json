@@ -803,6 +803,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "ITI.SFML.Audio >= 0.1.0",
+      "ITI.SFML.Graphics >= 0.1.0",
       "LastBastion.Model >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -852,6 +854,14 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "ITI.SFML.Audio": {
+            "target": "Package",
+            "version": "[0.1.0, )"
+          },
+          "ITI.SFML.Graphics": {
+            "target": "Package",
+            "version": "[0.1.0, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.1.0, )",
