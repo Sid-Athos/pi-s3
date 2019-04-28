@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*
 namespace LastBastion.Model
 {
     public class Villagers : Units
@@ -17,8 +17,8 @@ namespace LastBastion.Model
 
         uint _harvestCooldown = 3;
 
-        public Villager( string job)
-            :base(Map context,bool flying, float posX, float posY)
+        public Villagers( string job)
+            : base(Map context,bool flying, float posX, float posY)
         {
             _job = job;
             base._villagePeople.add(this);
@@ -41,3 +41,4 @@ namespace LastBastion.Model
         public bool IsMoving => _isMoving;
     }
 }
+*/

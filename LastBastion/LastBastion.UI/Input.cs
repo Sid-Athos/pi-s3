@@ -36,6 +36,7 @@ namespace test
                 case Keyboard.Key.G:
                     break;
                 case Keyboard.Key.H:
+                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("House");
                     break;
                 case Keyboard.Key.I:
                     break;
@@ -169,19 +170,19 @@ namespace test
                     break;
                 case Keyboard.Key.Left:
                 case Keyboard.Key.Q:
-                    _game.GetWindow.GetViews.ViewLeft();
+                    _game.GetWindow.GetViewRenderer.ViewLeft();
                     break;
                 case Keyboard.Key.Right:
                 case Keyboard.Key.D:
-                    _game.GetWindow.GetViews.ViewRight();
+                    _game.GetWindow.GetViewRenderer.ViewRight();
                     break;
                 case Keyboard.Key.Up:
                 case Keyboard.Key.Z:
-                    _game.GetWindow.GetViews.ViewUp();
+                    _game.GetWindow.GetViewRenderer.ViewUp();
                     break;
                 case Keyboard.Key.Down:
                 case Keyboard.Key.S:
-                    _game.GetWindow.GetViews.ViewDown();
+                    _game.GetWindow.GetViewRenderer.ViewDown();
                     break;
                 case Keyboard.Key.F1:
                     break;
