@@ -36,6 +36,7 @@ namespace test
                 case Keyboard.Key.G:
                     break;
                 case Keyboard.Key.H:
+                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("House");
                     break;
                 case Keyboard.Key.I:
                     break;

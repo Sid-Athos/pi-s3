@@ -17,6 +17,7 @@ namespace test
 
         Sprite _sprite;
         Sprite _castle;
+        Sprite _building;
 
         List<Hut> _nearby;
         int _area;
@@ -30,10 +31,11 @@ namespace test
             _area = 3;
             BuilingRenderer();
             SetNearby();
+            Console.WriteLine(_nearby.Count);
         }
+
         public void SetNearby()
         {
-            _nearby.Clear();
             for (int i = -1*_area+1; i < _area; i++)
             {
                 for (int j = -1*_area+1; j < _area; j++)
@@ -46,6 +48,45 @@ namespace test
             }
         }
 
+        public int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
+        public void CreateBuilding(String name)
+        {
+            if (_nearby.Count > 0)
+            {
+                int _random = RandomNumber(0, _nearby.Count - 1);
+                foreach (var item in _grid)
+                {
+                    if (item.Value == _nearby[_random])
+                    {
+                        item.Value.SetBuilding(name);
+                    }
+                }
+                _nearby.Remove(_nearby[_random]);
+                _nearby = RebuildeMegaGreatConstructor();
+            }
+            if (_nearby.Count == 0)
+            {
+                _area++;
+                SetNearby();
+            }
+            Console.WriteLine(_nearby.Count);
+        }
+
+        public List<Hut> RebuildeMegaGreatConstructor()
+        {
+            List<Hut> newList = new List<Hut>();
+            foreach (var item in _nearby)
+            {
+                newList.Add(item);
+            }
+            return newList;
+        }
+
         public void BuilingRenderer()
         {
             Texture texture = new Texture("../../../../images/test.png");
@@ -53,7 +94,31 @@ namespace test
 
             texture = new Texture("../../../../images/castle.png");
             _castle = new Sprite(texture);
-
+            _grid[new Vector2i(-1, 0)].SetBuilding("Castle");
+            _grid[new Vector2i(-1, 1)].SetBuilding("Castle");
+            _grid[new Vector2i(-1, -1)].SetBuilding("Castle");
+            _grid[new Vector2i(0, 0)].SetBuilding("Castle");
+            _grid[new Vector2i(0, 1)].SetBuilding("Castle");
+            _grid[new Vector2i(0, -1)].SetBuilding("Castle");
+            _grid[new Vector2i(1, 0)].SetBuilding("Castle");
+            _grid[new Vector2i(1, 1)].SetBuilding("Castle");
+            _grid[new Vector2i(1, -1)].SetBuilding("Castle");
+            texture = new Texture("../../../../images/house.png");
+            _building = new Sprite(texture);
+        }
+        public void DrawBuilding()
+        {
+            foreach (var item in _grid)
+            {
+                if (item.Value.IsBusy())
+                {
+                    if (item.Value.GetName == "House")
+                    {
+                        _building.Position = item.Value.GetVecHut;
+                        _window.GetWindow.Draw(_building);
+                    }
+                }
+            }
         }
 
         public void DrawCastle()
