@@ -1,47 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-/*
+
 namespace LastBastion.Model
 {
     public class Barbars : Units
     {
         static uint _count;
-        uint _lifePoints = 30;
-        readonly uint _dmg = 5;
-        bool _attackable;
-        readonly uint _armor = 0;                        // each armor point reduces damages by 10%.
-        bool _isMoving = false;
-        uint _aaCooldown = 3;                // AutoAttacks cooldown
-        float _speed = 1.0;
 
-        public Barbar()
-            :base(Map context, bool flying, float posX, float posY)
+        public Barbars(bool flying, float posX, float posY,
+            string job, uint lifePoints, uint dmg, uint armor, bool isMoving,
+            uint attackCooldown, float speed)
+            :base(flying, posX, posY,
+            job, lifePoints, dmg, armor, isMoving,
+            attackCooldown, speed)
         {
             _count++;
-            _attackable = true;
         }
 
-        public void Attack(Units unit)
+
+        /**public void Move(double x, double Y)
         {
-            unit._lifePoints = unit._lifePoints - (_dmg - unit.armor);
-        }
-
-        public uint Count => _count;
-
-        public string Jobs => _job;
-
-        public uint Dmg => _dmg;
-
-        public uint Armor => _armor;
-
-        public void Move(double x, double Y)
-        {
-            // Other code here
             _isMoving = !isMoving;
-        }
-
-        public bool IsMoving => _isMoving;
+        }*/
     }
 }
-*/
