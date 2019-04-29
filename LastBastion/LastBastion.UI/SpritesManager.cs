@@ -31,6 +31,12 @@ namespace LastBastion.UI
 
             texture = new Texture("../../../../images/wood.png");
             _sprites.Add("Wood", new Sprite(texture));
+
+            texture = new Texture("../../../../images/CursorFont.png");
+            _sprites.Add("CursorFont", new Sprite(texture));
+
+            texture = new Texture("../../../../images/CursorBoard.png");
+            _sprites.Add("CursorBoard", new Sprite(texture));
         }
     }
 }

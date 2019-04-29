@@ -69,12 +69,15 @@ namespace test
                     break;
                 case Keyboard.Key.Num0:
                 case Keyboard.Key.Numpad0:
+
                     break;
                 case Keyboard.Key.Num1:
                 case Keyboard.Key.Numpad1:
+                    _game.GetWindow.GetViewRenderer.zoom();
                     break;
                 case Keyboard.Key.Num2:
                 case Keyboard.Key.Numpad2:
+                    _game.GetWindow.GetViewRenderer.dezoom();
                     break;
                 case Keyboard.Key.Num3:
                 case Keyboard.Key.Numpad3:
@@ -147,8 +150,6 @@ namespace test
                     break;
                 case Keyboard.Key.Tab:
                     break;
-                case Keyboard.Key.PageUp:
-                    break;
                 case Keyboard.Key.PageDown:
                     break;
                 case Keyboard.Key.End:
@@ -160,6 +161,7 @@ namespace test
                 case Keyboard.Key.Delete:
                     break;
                 case Keyboard.Key.Add:
+                case Keyboard.Key.PageUp:
                     break;
                 case Keyboard.Key.Subtract:
                     break;

@@ -64,6 +64,7 @@ namespace test
             foreach (var item in _grid)
             {
                 _tile.Position = item.Value.GetVecHut;
+                _tile.Scale = new Vector2f(1f,1f);
                 _window.GetWindow.Draw(_tile);
             }
         }
@@ -87,10 +88,10 @@ namespace test
         public void CreateGrid(int x, int y)
         {
             int l = -1*(x/2);
-            for (float i = 7.5f; i < 50 * 15; i += 15)
+            for (float i = 0; i < 50 * 15; i += 15)
             {
                 int h = -1*(y/2);
-                for (float j = 7.5f; j < 50 * 15; j += 15)
+                for (float j = 0; j < 50 * 15; j += 15)
                 {
                     Hut NewH = new Hut(new Vector2f(i,j), "[ " +l + " ; " + h + " ]");
                     _grid.Add(new Vector2i(l,h), NewH);

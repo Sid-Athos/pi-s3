@@ -7,7 +7,7 @@ using SFML.Window;
 //{}
 namespace test
 {
-    class ViewRenderer : View
+    class ViewRenderer
     {
         WindowRenderer _window;
         View _view;
@@ -23,16 +23,17 @@ namespace test
         public ViewRenderer(WindowRenderer window,float Xdim, float Ydim, float XPos, float YPos)
         {
             _window = window;
-            _view = new View(new Vector2f(100, 100), new Vector2f(200, 200));
-            _XDim = 200;
-            _YDim = 200;
+            _view = new View();
+            _XDim = 7.5f + 20*15;
+            _YDim = 7.5f + 20*15;
+            _dim = new Vector2f(_XDim, _YDim);
+            _view.Size = new Vector2f(_XDim, _YDim);
 
             _pos = new Vector2i(_XPos, _YPos);
-            _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+            _view.Center = new Vector2f(_window.GetMap.GetGrid()[_pos].GetVecHut.X + 7.5f, _window.GetMap.GetGrid()[_pos].GetVecHut.Y + 7.5f);
             _XPos = 0;
             _YPos = 0;
 
-            _dim = new Vector2f(_XDim, _YDim);
             Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
         }
         public View GetView => _view;
@@ -42,7 +43,8 @@ namespace test
             {
                 _YPos -= 1;
                 _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                _view.Center = new Vector2f(_window.GetMap.GetGrid()[_pos].GetVecHut.X + 7.5f, _window.GetMap.GetGrid()[_pos].GetVecHut.Y + 7.5f);
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetVecHut.X + " : " + _window.GetMap.GetGrid()[_pos].GetVecHut.Y);
                 Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
@@ -52,7 +54,8 @@ namespace test
             {
                 _YPos += 1;
                 _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                _view.Center = new Vector2f(_window.GetMap.GetGrid()[_pos].GetVecHut.X + 7.5f, _window.GetMap.GetGrid()[_pos].GetVecHut.Y + 7.5f);
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetVecHut.X + " : " + _window.GetMap.GetGrid()[_pos].GetVecHut.Y);
                 Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
@@ -62,7 +65,8 @@ namespace test
             {
                 _XPos += 1;
                 _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                _view.Center = new Vector2f(_window.GetMap.GetGrid()[_pos].GetVecHut.X + 7.5f, _window.GetMap.GetGrid()[_pos].GetVecHut.Y + 7.5f);
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetVecHut.X + " : " + _window.GetMap.GetGrid()[_pos].GetVecHut.Y);
                 Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
@@ -72,21 +76,22 @@ namespace test
             {
                 _XPos -= 1;
                 _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
+                _view.Center = new Vector2f(_window.GetMap.GetGrid()[_pos].GetVecHut.X + 7.5f, _window.GetMap.GetGrid()[_pos].GetVecHut.Y + 7.5f);
+                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetVecHut.X + " : " + _window.GetMap.GetGrid()[_pos].GetVecHut.Y);
                 Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
             }
         }
         public void zoom()
         {
-            _XDim += 20;
-            _YDim += 20;
+            _XDim += 15;
+            _YDim += 15;
             _dim = new Vector2f(_XDim,_YDim);
             _view.Size = _dim;
         }
         public void dezoom()
         {
-            _XDim -= 20;
-            _YDim -= 20;
+            _XDim -= 15;
+            _YDim -= 15;
             _dim = new Vector2f(_XDim, _YDim);
             _view.Size = _dim;
         }
