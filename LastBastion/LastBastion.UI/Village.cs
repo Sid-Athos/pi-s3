@@ -17,10 +17,13 @@ namespace test
 
         Sprite _sprite;
         Sprite _castle;
-        Sprite _building;
+        Sprite _house;
+        Sprite _sawmill;
 
         List<Hut> _nearby;
         int _area;
+
+        Random _random = new Random();
 
         public Village(Map map, Dictionary<Vector2i, Hut> grid, WindowRenderer window)
         {
@@ -48,13 +51,9 @@ namespace test
             }
         }
 
-        public int RandomNumber(int min, int max)
-        {
-            Random random = new Random();
-            return random.Next(min, max);
-        }
+        public int RandomNumber(int min, int max) => _random.Next(min, max);
 
-        public void CreateBuilding(String name)
+        public void CreateBuilding(string name)
         {
             if (_nearby.Count > 0)
             {
@@ -104,7 +103,9 @@ namespace test
             _grid[new Vector2i(1, 1)].SetBuilding("Castle");
             _grid[new Vector2i(1, -1)].SetBuilding("Castle");
             texture = new Texture("../../../../images/house.png");
-            _building = new Sprite(texture);
+            _house = new Sprite(texture);
+            texture = new Texture("../../../../images/sawmill.png");
+            _sawmill = new Sprite(texture);
         }
         public void DrawBuilding()
         {
@@ -114,8 +115,13 @@ namespace test
                 {
                     if (item.Value.GetName == "House")
                     {
-                        _building.Position = item.Value.GetVecHut;
-                        _window.GetWindow.Draw(_building);
+                        _house.Position = item.Value.GetVecHut;
+                        _window.GetWindow.Draw(_house);
+                    }
+                    if (item.Value.GetName == "Sawmill")
+                    {
+                        _sawmill.Position = item.Value.GetVecHut;
+                        _window.GetWindow.Draw(_house);
                     }
                 }
             }

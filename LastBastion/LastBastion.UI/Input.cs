@@ -26,6 +26,7 @@ namespace test
                     _game.Close();
                     break;
                 case Keyboard.Key.B:
+                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("Sawmill");
                     break;
                 case Keyboard.Key.C:
                     break;
@@ -73,9 +74,11 @@ namespace test
                     break;
                 case Keyboard.Key.Num1:
                 case Keyboard.Key.Numpad1:
+                    _game.GetWindow.GetViewRenderer.zoom();
                     break;
                 case Keyboard.Key.Num2:
                 case Keyboard.Key.Numpad2:
+                    _game.GetWindow.GetViewRenderer.dezoom();
                     break;
                 case Keyboard.Key.Num3:
                 case Keyboard.Key.Numpad3:

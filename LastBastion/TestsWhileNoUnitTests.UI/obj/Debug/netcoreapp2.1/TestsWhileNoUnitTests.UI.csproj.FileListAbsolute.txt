@@ -12,3 +12,17 @@ C:\Users\sidbe\source\repos\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.csproj.CopyComplete
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.dll
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.pdb
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.deps.json
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.runtimeconfig.json
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.runtimeconfig.dev.json
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.dll
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.pdb
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\LastBastion.Model.dll
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\LastBastion.Model.pdb
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.csprojAssemblyReference.cache
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.csproj.CoreCompileInputs.cache
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.AssemblyInfoInputs.cache
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.AssemblyInfo.cs
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.csproj.CopyComplete
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.dll
+C:\LastBastion\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.pdb

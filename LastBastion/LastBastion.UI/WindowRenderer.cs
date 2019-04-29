@@ -20,7 +20,7 @@ namespace test
 
         public WindowRenderer(uint height, uint width, string title)
         {
-            _window = new RenderWindow(new VideoMode(600, 600), title, Styles.Default);
+            _window = new RenderWindow(new VideoMode(1000, 1000), title, Styles.Default);
             //SetDStyles();
             _map = new Map(this);
             _view0 = NewView();
