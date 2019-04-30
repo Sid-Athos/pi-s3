@@ -6,7 +6,7 @@ namespace LastBastion.Model
 {
     public class Towers : Buildings
     {
-        
+
         Villagers [] _slots;
         uint _rank = 1;
 

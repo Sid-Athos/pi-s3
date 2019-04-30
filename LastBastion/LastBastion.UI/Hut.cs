@@ -4,15 +4,20 @@ using System.Text;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+
+
 //{}
 
-namespace test
+namespace LastBastion.UI
 {
     class Hut
     {
+
+
         Vector2f _pos;
         String _name;
         string _building;
+        
 
         Sprite _sprite;
 

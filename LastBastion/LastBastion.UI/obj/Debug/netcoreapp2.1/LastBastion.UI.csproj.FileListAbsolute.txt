@@ -1,4 +1,3 @@
-C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.csprojAssemblyReference.cache
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.csproj.CoreCompileInputs.cache
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.AssemblyInfoInputs.cache
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.AssemblyInfo.cs
@@ -42,3 +41,4 @@ C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreap
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.AssemblyInfo.cs
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.dll
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.pdb
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.UI\obj\Debug\netcoreapp2.1\LastBastion.UI.csprojAssemblyReference.cache

@@ -6,7 +6,7 @@ using SFML.System;
 using SFML.Window;
 //{}
 
-namespace test
+namespace LastBastion.UI
 {
     class Village
     {

@@ -25,3 +25,6 @@ C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcor
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.pdb
 >>>>>>> 67478430641a4bd60366f3fb93467dd048f97d5c
 C:\Users\sidbe\source\repos\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.csprojAssemblyReference.cache
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\bin\Debug\netcoreapp2.1\LastBastion.Model.pdb
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.dll
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.Model.pdb
