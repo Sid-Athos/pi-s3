@@ -20,7 +20,7 @@ namespace test
 
         public WindowRenderer(uint height, uint width, string title)
         {
-            _window = new RenderWindow(new VideoMode(width, height), title, Styles.Default);
+            _window = new RenderWindow(new VideoMode(1000, 1000), title, Styles.Default);
             //SetDStyles();
             _map = new Map(this);
             _view0 = NewView();
@@ -35,6 +35,14 @@ namespace test
         public Map GetMap
         {
             get { return _map; }
+        }
+        public RenderWindow GetWindow
+        {
+            get { return _window; }
+        }
+        public ViewRenderer GetViewRenderer
+        {
+            get { return _view0; }
         }
 
         /*

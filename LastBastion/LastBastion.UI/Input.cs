@@ -26,6 +26,7 @@ namespace test
                     _game.Close();
                     break;
                 case Keyboard.Key.B:
+                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("Sawmill");
                     break;
                 case Keyboard.Key.C:
                     break;
@@ -36,6 +37,7 @@ namespace test
                 case Keyboard.Key.G:
                     break;
                 case Keyboard.Key.H:
+                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("House");
                     break;
                 case Keyboard.Key.I:
                     break;
@@ -72,9 +74,11 @@ namespace test
                     break;
                 case Keyboard.Key.Num1:
                 case Keyboard.Key.Numpad1:
+                    _game.GetWindow.GetViewRenderer.zoom();
                     break;
                 case Keyboard.Key.Num2:
                 case Keyboard.Key.Numpad2:
+                    _game.GetWindow.GetViewRenderer.dezoom();
                     break;
                 case Keyboard.Key.Num3:
                 case Keyboard.Key.Numpad3:
@@ -169,19 +173,19 @@ namespace test
                     break;
                 case Keyboard.Key.Left:
                 case Keyboard.Key.Q:
-                    _game.GetWindow.GetViews.ViewLeft();
+                    _game.GetWindow.GetViewRenderer.ViewLeft();
                     break;
                 case Keyboard.Key.Right:
                 case Keyboard.Key.D:
-                    _game.GetWindow.GetViews.ViewRight();
+                    _game.GetWindow.GetViewRenderer.ViewRight();
                     break;
                 case Keyboard.Key.Up:
                 case Keyboard.Key.Z:
-                    _game.GetWindow.GetViews.ViewUp();
+                    _game.GetWindow.GetViewRenderer.ViewUp();
                     break;
                 case Keyboard.Key.Down:
                 case Keyboard.Key.S:
-                    _game.GetWindow.GetViews.ViewDown();
+                    _game.GetWindow.GetViewRenderer.ViewDown();
                     break;
                 case Keyboard.Key.F1:
                     break;
