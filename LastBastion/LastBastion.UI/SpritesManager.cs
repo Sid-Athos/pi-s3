@@ -31,6 +31,9 @@ namespace LastBastion.UI
             texture = new Texture("../../../../images/Tile.png");
             _sprites.Add("Tile", new Sprite(texture));
 
+            texture = new Texture("../../../../images/Cursor.png");
+            _sprites.Add("Cursor", new Sprite(texture));
+
             texture = new Texture("../../../../images/wood.png");
             _sprites.Add("Wood", new Sprite(texture));
 
