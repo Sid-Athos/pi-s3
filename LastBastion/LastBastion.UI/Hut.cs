@@ -11,26 +11,19 @@ namespace LastBastion.UI
     class Hut
     {
         Vector2f _pos;
+        Vector2i _posG;
         String _name;
         string _building;
 
-        Sprite _sprite;
-
-        public Hut(Vector2f pos, string name)
+        public Hut(Vector2f pos, string name, Vector2i posG)
         {
+            _posG = posG;
             _pos = pos;
-            _name = name;
             _building = "Empty";
         }
-
-        public Vector2f GetVecHut
-        {
-            get { return _pos; }
-        }
-        public String GetName
-        {
-            get { return _building; }
-        }
+        public Vector2i GetVector { get { return _posG; } }
+        public Vector2f GetVecHut{get { return _pos; }}
+        public String GetName{get { return _building; }}
         public bool IsBusy()
         {
             if (_building != "Empty")
@@ -39,9 +32,6 @@ namespace LastBastion.UI
             }
             return false;
         }
-        public void SetBuilding(string a)
-        {
-            _building = a;
-        }
+        public void SetBuilding(string a){_building = a;}
     }
 }

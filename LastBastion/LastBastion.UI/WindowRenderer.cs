@@ -29,8 +29,9 @@ namespace LastBastion.UI
 
         public void PrintCursor()
         {
-            _game.Sprites.GetSprite("CursorFont").Position = _window.DefaultView.Center;
-            _game.Sprites.GetSprite("CursorBoard").Position = _window.DefaultView.Center;
+            _game.Sprites.GetSprite("CursorFont").Color = new Color(255, 255, 255, 128);
+            _game.Sprites.GetSprite("CursorFont").Position = _window.View.Center;
+            _game.Sprites.GetSprite("CursorBoard").Position = _window.View.Center;
             _window.Draw(_game.Sprites.GetSprite("CursorFont"));
             _window.Draw(_game.Sprites.GetSprite("CursorBoard"));
         }

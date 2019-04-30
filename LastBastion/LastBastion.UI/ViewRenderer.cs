@@ -32,6 +32,7 @@ namespace LastBastion.UI
             {
                 _y -= 1;
                 _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewDown()
@@ -40,6 +41,7 @@ namespace LastBastion.UI
             {
                 _y += 1;
                 _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewRight()
@@ -48,6 +50,7 @@ namespace LastBastion.UI
             {
                 _x += 1;
                 _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewLeft()
@@ -56,6 +59,7 @@ namespace LastBastion.UI
             {
                 _x -= 1;
                 _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void zoom()

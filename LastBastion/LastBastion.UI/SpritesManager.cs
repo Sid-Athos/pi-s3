@@ -34,12 +34,18 @@ namespace LastBastion.UI
             texture = new Texture("../../../../images/wood.png");
             _sprites.Add("Wood", new Sprite(texture));
 
+            texture = new Texture("../../../../images/Stone.png");
+            _sprites.Add("Stone", new Sprite(texture));
+
             texture = new Texture("../../../../images/House.png");
             _sprites.Add("House", new Sprite(texture));
 
             texture = new Texture("../../../../images/castle.png");
             _sprites.Add("Castle", new Sprite(texture));
-            
+
+            texture = new Texture("../../../../images/Bush.png");
+            _sprites.Add("Bush", new Sprite(texture));
+
             texture = new Texture("../../../../images/sawmill.png");
             _sprites.Add("Sawmill", new Sprite(texture));
         }

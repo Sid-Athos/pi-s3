@@ -15,8 +15,6 @@ namespace LastBastion.UI
         List<Hut> _nearby;
         int _area;
 
-        Random _random = new Random();
-
         public Village(Map map)
         {
             _map = map;
@@ -40,13 +38,11 @@ namespace LastBastion.UI
             }
         }
 
-        public int RandomNumber(int min, int max) => _random.Next(min, max);
-
         public void CreateBuilding(string name)
         {
             if (_nearby.Count > 0)
             {
-                int _random = RandomNumber(0, _nearby.Count - 1);
+                int _random = GetMap.GetGame.RandomNumber(0, _nearby.Count - 1);
                 foreach (var item in _map.GetGrid)
                 {
                     if (item.Value == _nearby[_random])
@@ -103,6 +99,21 @@ namespace LastBastion.UI
                         _map.GetGame.Sprites.GetSprite("Sawmill").Position = item.Value.GetVecHut;
                         _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Sawmill"));
                     }
+                    if (item.Value.GetName == "Stone")
+                    {
+                        _map.GetGame.Sprites.GetSprite("Stone").Position = item.Value.GetVecHut;
+                        _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Stone"));
+                    }
+                    if (item.Value.GetName == "Wood")
+                    {
+                        _map.GetGame.Sprites.GetSprite("Wood").Position = item.Value.GetVecHut;
+                        _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Wood"));
+                    }
+                    if (item.Value.GetName == "Bush")
+                    {
+                        _map.GetGame.Sprites.GetSprite("Bush").Position = item.Value.GetVecHut;
+                        _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Bush"));
+                    }
                 }
             }
         }
@@ -112,5 +123,7 @@ namespace LastBastion.UI
             _map.GetGame.Sprites.GetSprite("Castle").Position = _map.GetGrid[new Vector2i(-1, -1)].GetVecHut;
             _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Castle"));
         }
+
+        public Map GetMap => _map;
     }
 }

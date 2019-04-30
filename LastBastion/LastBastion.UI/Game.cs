@@ -17,6 +17,7 @@ namespace LastBastion.UI
         Input _input;
 
         SpritesManager _sprites;
+        Random _random = new Random();
 
         public void Run()
         {
@@ -49,9 +50,13 @@ namespace LastBastion.UI
             }
 
         }
+
+        public int RandomNumber(int min, int max) => _random.Next(min, max);
+        public void Close() { _window.Render.Close(); }
+
         public SpritesManager Sprites { get { return _sprites; } }
         public WindowRenderer GetWindow { get { return _window; } }
         public Map GetMap { get { return _map; } }
-        public void Close() { _window.Render.Close(); }
+        public Random GetRDM => _random;
     }
 }
