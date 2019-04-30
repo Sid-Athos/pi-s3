@@ -15,6 +15,8 @@ namespace LastBastion.UI
         Map _map;
 
         Input _input;
+        int _countTimer;
+        int _sec;
 
         SpritesManager _sprites;
         Random _random = new Random();
@@ -26,7 +28,9 @@ namespace LastBastion.UI
         {
             _sprites = new SpritesManager();
             _sprites.Initialized();
-            
+
+            _countTimer = 0;
+            _sec = DateTime.Now.Second;
             _pause = true;
             _input = new Input(this);
             _map = new Map(this);
@@ -41,15 +45,40 @@ namespace LastBastion.UI
 
         public void Gameloop()
         {
+            bool MinutePass = true;
+
             while (_window.Render.IsOpen)
             {
                 _window.Render.DispatchEvents();
                 _window.Render.Clear();
 
-                _map.PrintMap(50, 50);
-                _map.GetVillage.DrawCastle();
-                _map.GetVillage.DrawBuilding();
-                _window.Render.View = _window.GetView.Render;
+                if (DateTime.Now.Second == 1 && MinutePass == true)
+                {
+                    _sec = 1;
+                    _countTimer+= 2;
+                    MinutePass = false;
+                    Console.WriteLine(_countTimer);
+                }
+                else
+                {
+                    if (_sec < DateTime.Now.Second)
+                    {
+                        _sec = DateTime.Now.Second;
+                        _countTimer++;
+                        Console.WriteLine(_countTimer);
+                    }
+                    if (DateTime.Now.Second == 2 && MinutePass == false)
+                    {
+                        MinutePass = true;
+                    }
+                }
+                if (_pause)
+                {
+                    _map.PrintMap(50, 50);
+                    _map.GetVillage.DrawCastle();
+                    _map.GetVillage.DrawBuilding();
+                    _window.Render.View = _window.GetView.Render;
+                }
                 _window.PrintCursor();
 
                 _window.Render.Display();

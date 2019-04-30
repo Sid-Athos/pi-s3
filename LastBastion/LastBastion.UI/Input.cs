@@ -54,6 +54,7 @@ namespace LastBastion.UI
                 case Keyboard.Key.O:
                     break;
                 case Keyboard.Key.P:
+                    _game.Pause();
                     break;
                 case Keyboard.Key.R:
                     break;
