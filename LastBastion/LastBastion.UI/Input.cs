@@ -5,7 +5,7 @@ using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 //{}
-namespace test
+namespace LastBastion.UI
 {
     class Input
     {
@@ -26,7 +26,7 @@ namespace test
                     _game.Close();
                     break;
                 case Keyboard.Key.B:
-                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("Sawmill");
+                    _game.GetMap.GetVillage.CreateBuilding("Sawmill");
                     break;
                 case Keyboard.Key.C:
                     break;
@@ -37,7 +37,7 @@ namespace test
                 case Keyboard.Key.G:
                     break;
                 case Keyboard.Key.H:
-                    _game.GetWindow.GetMap.GetVillage.CreateBuilding("House");
+                    _game.GetMap.GetVillage.CreateBuilding("House");
                     break;
                 case Keyboard.Key.I:
                     break;
@@ -74,11 +74,11 @@ namespace test
                     break;
                 case Keyboard.Key.Num1:
                 case Keyboard.Key.Numpad1:
-                    _game.GetWindow.GetViewRenderer.zoom();
+                    _game.GetWindow.GetView.zoom();
                     break;
                 case Keyboard.Key.Num2:
                 case Keyboard.Key.Numpad2:
-                    _game.GetWindow.GetViewRenderer.dezoom();
+                    _game.GetWindow.GetView.dezoom();
                     break;
                 case Keyboard.Key.Num3:
                 case Keyboard.Key.Numpad3:
@@ -173,19 +173,19 @@ namespace test
                     break;
                 case Keyboard.Key.Left:
                 case Keyboard.Key.Q:
-                    _game.GetWindow.GetViewRenderer.ViewLeft();
+                    _game.GetWindow.GetView.ViewLeft();
                     break;
                 case Keyboard.Key.Right:
                 case Keyboard.Key.D:
-                    _game.GetWindow.GetViewRenderer.ViewRight();
+                    _game.GetWindow.GetView.ViewRight();
                     break;
                 case Keyboard.Key.Up:
                 case Keyboard.Key.Z:
-                    _game.GetWindow.GetViewRenderer.ViewUp();
+                    _game.GetWindow.GetView.ViewUp();
                     break;
                 case Keyboard.Key.Down:
                 case Keyboard.Key.S:
-                    _game.GetWindow.GetViewRenderer.ViewDown();
+                    _game.GetWindow.GetView.ViewDown();
                     break;
                 case Keyboard.Key.F1:
                     break;

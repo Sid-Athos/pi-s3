@@ -6,56 +6,52 @@ using SFML.System;
 using SFML.Window;
 //{}
 //[]
-namespace test
+namespace LastBastion.UI
 {
     class Game
     {
-        string _name = "Last Bastion";
 
         WindowRenderer _window;
+        Map _map;
+
         Input _input;
-        
+
+        SpritesManager _sprites;
 
         public void Run()
         {
-            //SFML.WindowNative.Load();
-            //SFML.GraphicsNative.Load();
+            _sprites = new SpritesManager();
+            _sprites.Initialized();
 
             _input = new Input(this);
-            _window = new WindowRenderer(VideoMode.DesktopMode.Height/2,VideoMode.DesktopMode.Width/2,_name);
-            
-            _window.GetWindow.KeyPressed += _input.IsKeyPressed;
-            //Console.WriteLine(_window.GetViewRenderer.GetDim.X);
+            _map = new Map(this);
+            _window = new WindowRenderer(this);
+
+            _window.Render.KeyPressed += _input.IsKeyPressed;
             
             Gameloop();
         }
 
         public void Gameloop()
         {
-            while (_window.GetWindow.IsOpen)
+            while (_window.Render.IsOpen)
             {
-                _window.GetWindow.DispatchEvents();
-                _window.GetWindow.Clear();
+                _window.Render.DispatchEvents();
+                _window.Render.Clear();
 
-                _window.GetMap.PrintMap(50,50);
-                _window.GetMap.GetVillage.DrawCastle();
-                _window.GetMap.GetVillage.DrawBuilding();
-                _window.GetWindow.View = _window.GetViewRenderer.GetView;
-                _window.GetMap.PrintCursor();
+                _map.PrintMap(50,50);
+                _map.GetVillage.DrawCastle();
+                _map.GetVillage.DrawBuilding();
+                _window.Render.View = _window.GetView.Render;
+                _window.PrintCursor();
                 
-                _window.GetWindow.Display();
+                _window.Render.Display();
             }
 
         }
-
-        public WindowRenderer GetWindow
-        {
-            get { return _window; }
-        }
-
-        public void Close()
-        {
-            _window.GetWindow.Close();
-        }
+        public SpritesManager Sprites { get { return _sprites; } }
+        public WindowRenderer GetWindow { get { return _window; } }
+        public Map GetMap { get { return _map; } }
+        public void Close() { _window.Render.Close(); }
     }
 }

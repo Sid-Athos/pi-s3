@@ -6,35 +6,24 @@ using SFML.System;
 using SFML.Window;
 //{}
 
-namespace test
+namespace LastBastion.UI
 {
     class Village
     {
         Map _map;
-        Dictionary<Vector2i, Hut> _grid;
-
-        WindowRenderer _window;
-
-        Sprite _sprite;
-        Sprite _castle;
-        Sprite _house;
-        Sprite _sawmill;
-
+        
         List<Hut> _nearby;
         int _area;
 
         Random _random = new Random();
 
-        public Village(Map map, Dictionary<Vector2i, Hut> grid, WindowRenderer window)
+        public Village(Map map)
         {
             _map = map;
-            _grid = grid;
-            _window = window;
             _nearby = new List<Hut>();
             _area = 3;
             BuilingRenderer();
             SetNearby();
-            Console.WriteLine(_nearby.Count);
         }
 
         public void SetNearby()
@@ -43,9 +32,9 @@ namespace test
             {
                 for (int j = -1*_area+1; j < _area; j++)
                 {
-                    if(!_grid[new Vector2i(i, j)].IsBusy())
+                    if(!_map.GetGrid[new Vector2i(i, j)].IsBusy())
                     {
-                        _nearby.Add(_grid[new Vector2i(i, j)]);
+                        _nearby.Add(_map.GetGrid[new Vector2i(i, j)]);
                     }
                 }
             }
@@ -58,7 +47,7 @@ namespace test
             if (_nearby.Count > 0)
             {
                 int _random = RandomNumber(0, _nearby.Count - 1);
-                foreach (var item in _grid)
+                foreach (var item in _map.GetGrid)
                 {
                     if (item.Value == _nearby[_random])
                     {
@@ -88,40 +77,31 @@ namespace test
 
         public void BuilingRenderer()
         {
-            Texture texture = new Texture("../../../../images/test.png");
-            _sprite = new Sprite(texture);
-
-            texture = new Texture("../../../../images/castle.png");
-            _castle = new Sprite(texture);
-            _grid[new Vector2i(-1, 0)].SetBuilding("Castle");
-            _grid[new Vector2i(-1, 1)].SetBuilding("Castle");
-            _grid[new Vector2i(-1, -1)].SetBuilding("Castle");
-            _grid[new Vector2i(0, 0)].SetBuilding("Castle");
-            _grid[new Vector2i(0, 1)].SetBuilding("Castle");
-            _grid[new Vector2i(0, -1)].SetBuilding("Castle");
-            _grid[new Vector2i(1, 0)].SetBuilding("Castle");
-            _grid[new Vector2i(1, 1)].SetBuilding("Castle");
-            _grid[new Vector2i(1, -1)].SetBuilding("Castle");
-            texture = new Texture("../../../../images/house.png");
-            _house = new Sprite(texture);
-            texture = new Texture("../../../../images/sawmill.png");
-            _sawmill = new Sprite(texture);
+            _map.GetGrid[new Vector2i(-1, 0)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(-1, 1)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(-1, -1)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(0, 0)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(0, 1)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(0, -1)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(1, 0)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(1, 1)].SetBuilding("Castle");
+            _map.GetGrid[new Vector2i(1, -1)].SetBuilding("Castle");
         }
         public void DrawBuilding()
         {
-            foreach (var item in _grid)
+            foreach (var item in _map.GetGrid)
             {
                 if (item.Value.IsBusy())
                 {
                     if (item.Value.GetName == "House")
                     {
-                        _house.Position = item.Value.GetVecHut;
-                        _window.GetWindow.Draw(_house);
+                        _map.GetGame.Sprites.GetSprite("House").Position = item.Value.GetVecHut;
+                        _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("House"));
                     }
                     if (item.Value.GetName == "Sawmill")
                     {
-                        _sawmill.Position = item.Value.GetVecHut;
-                        _window.GetWindow.Draw(_house);
+                        _map.GetGame.Sprites.GetSprite("Sawmill").Position = item.Value.GetVecHut;
+                        _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Sawmill"));
                     }
                 }
             }
@@ -129,8 +109,8 @@ namespace test
 
         public void DrawCastle()
         {
-            _castle.Position = _grid[new Vector2i(-1, -1)].GetVecHut;
-            _window.GetWindow.Draw(_castle);
+            _map.GetGame.Sprites.GetSprite("Castle").Position = _map.GetGrid[new Vector2i(-1, -1)].GetVecHut;
+            _map.GetGame.GetWindow.Render.Draw(_map.GetGame.Sprites.GetSprite("Castle"));
         }
     }
 }

@@ -6,89 +6,49 @@ using SFML.System;
 using SFML.Window;
 //{}
 
-namespace test
+namespace LastBastion.UI
 {
     class Map
     {
-        WindowRenderer _window;
-        Sprite _sprite;
+        Game _game;
+
         Village _village;
-
-        Sprite _tile;
-
-        Sprite _Curse;
-        Sprite _CurseFont;
-        Sprite _CurseBoard;
 
         uint _width;
         uint _height;
 
         Dictionary<Vector2i, Hut> _grid;
 
-        public Map(WindowRenderer window)
+        public Map(Game game)
         {
-            _window = window;
+            _game = game;
+
             _grid = new Dictionary<Vector2i, Hut>();
-            //AAA
-            Texture texture = new Texture("../../../../images/test.png");
-            _sprite = new Sprite(texture);
 
-            _width = 50*15;
-            _height = 50*15;
-            Console.WriteLine("Width : " + _width);
-            Console.WriteLine("Height : " + _height);
-            //AAA
-
-            texture = new Texture("../../../../images/tile.png");
-            _tile = new Sprite(texture);
+            _width = 50;
+            _height = 50;
+            //Console.WriteLine("Width : " + _width);
+            //Console.WriteLine("Height : " + _height);
+            
             CreateGrid(50,50);
-
-            texture = new Texture("../../../../images/wood.png");
-            _Curse = new Sprite(texture);
-            _Curse.Color = new Color(30, 144, 255, 128);
-
-            texture = new Texture("../../../../images/CursorFont.png");
-            _CurseFont = new Sprite(texture);
-            _CurseFont.Color = new Color(30, 144, 255, 128);
-
-            texture = new Texture("../../../../images/CursorBoard.png");
-            _CurseBoard = new Sprite(texture);
-
-            _village = new Village(this, _grid, _window);
+            
+            _village = new Village(this);
         }
-
-        public void PrintMap()
-        {
-            _window.GetWindow.Draw(_sprite);
-        }
+        
         public void PrintMap(int x, int y)
         {
             foreach (var item in _grid)
             {
-                _tile.Position = item.Value.GetVecHut;
-                _window.GetWindow.Draw(_tile);
+                _game.Sprites.GetSprite("Tile").Position = item.Value.GetVecHut;
+                _game.GetWindow.Render.Draw(_game.Sprites.GetSprite("Tile"));
             }
         }
-        public void PrintCursor()
-        {
-            //_Curse.Position = _window.GetViewRenderer.GetView.Center;
-            _CurseFont.Position = _window.GetViewRenderer.GetView.Center;
-            _CurseBoard.Position = _window.GetViewRenderer.GetView.Center;
-            _window.GetWindow.Draw(_CurseFont);
-            _window.GetWindow.Draw(_CurseBoard);
-        }
-        public WindowRenderer GetWindow
-        {
-            get { return _window; }
-        }
-        public Village GetVillage
-        {
-            get { return _village; }
-        }
-        public uint MapHeight() => _height;
-        public uint MapWidth() => _width;
 
-        public Dictionary<Vector2i, Hut> GetGrid() => _grid;
+        public Game GetGame => _game;
+        public Village GetVillage { get { return _village; } }
+        public uint MapHeight => _height;
+        public uint MapWidth => _width;
+        public Dictionary<Vector2i, Hut> GetGrid => _grid;
 
         public void CreateGrid(int x, int y)
         {
