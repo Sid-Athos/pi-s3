@@ -14,12 +14,14 @@ namespace LastBastion.UI
         
         List<Hut> _nearby;
         int _area;
+        uint _population;
 
         public Village(Map map)
         {
             _map = map;
             _nearby = new List<Hut>();
             _area = 3;
+            _population = 10;
             BuilingRenderer();
             SetNearby();
         }

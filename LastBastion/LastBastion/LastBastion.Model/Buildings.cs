@@ -6,41 +6,30 @@ namespace LastBastion.Model
 {
     public class Buildings
     {
-        readonly float _posX;
-        readonly float _posY;
+        float _posX;
+        float _posY;
         uint _lifePoints;
         uint _maxLifePoints;
         static uint _count;
-        uint _dmg;
         uint _armor;
-        uint _aaCooldown;
         uint _rank;
 
-        public Buildings(float posX, float posY, uint lifePoints, uint dmg, uint armor, uint attackCooldown, uint rank)
+        public Buildings(float posX, float posY, uint lifePoints, uint armor, uint rank)
         {
             _posX = posX;
             _posY = posY;
             _lifePoints = lifePoints;
             _maxLifePoints = lifePoints;
-            _dmg = dmg;
             _armor = armor;
-            _aaCooldown = attackCooldown;
             _rank = rank;
             _count++;
         }
-
-        public uint Dmg => _dmg;
 
         public uint Armor => _armor;
 
         public void IncreaseArmor()
         {
             _armor++;
-        }
-
-        public void IncDamage()
-        {
-            _dmg *=  2;
         }
 
         public void IncHealth()
@@ -54,16 +43,25 @@ namespace LastBastion.Model
 
         public uint Life => _lifePoints;
 
-
-        public void Attack(Units unit)
+        public bool IsDestroy()
         {
-            if (_dmg > unit.Life)
+            if (_lifePoints <= 0)
             {
-                unit.Attacked(0);
-                unit.Die();
-                return;
+                return true;
             }
-            unit.Attacked(Math.Max(unit.Life - (_dmg - unit.Armor), 0));
+            return false;
+        }
+
+        public float Xpos
+        {
+            get { return _posX; }
+            set { _posX = value; }
+        }
+
+        public float Ypos
+        {
+            get { return _posY; }
+            set { _posY = value; }
         }
 
     }

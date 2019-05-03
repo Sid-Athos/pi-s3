@@ -1097,24 +1097,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rosiek\\.nuget\\packages\\": {},
+    "C:\\Users\\abidi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rosiek\\Desktop\\pi-s3-Map\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "projectUniqueName": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
       "projectName": "LastBastion.Model",
-      "projectPath": "C:\\Users\\Rosiek\\Desktop\\pi-s3-Map\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
-      "packagesPath": "C:\\Users\\Rosiek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rosiek\\Desktop\\pi-s3-Map\\LastBastion\\LastBastion.Model\\obj\\",
+      "projectPath": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "packagesPath": "C:\\Users\\abidi\\.nuget\\packages\\",
+      "outputPath": "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion\\LastBastion.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rosiek\\Desktop\\pi-s3-Map\\LastBastion\\NuGet.Config",
-        "C:\\Users\\Rosiek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\LastBastion\\pi-s3\\LastBastion\\LastBastion\\NuGet.Config",
+        "C:\\Users\\abidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
