@@ -24,8 +24,7 @@ namespace LastBastion.Model
             _rank = rank;
             _count++;
         }
-
-        public uint Dmg => _dmg;
+        
 
         public uint Armor => _armor;
 
@@ -34,10 +33,7 @@ namespace LastBastion.Model
             _armor++;
         }
 
-        public void IncDamage()
-        {
-            _dmg *=  2;
-        }
+        
 
         public void IncHealth()
         {
@@ -50,17 +46,8 @@ namespace LastBastion.Model
 
         public uint Life => _lifePoints;
 
-
-        public void Attack(Units unit)
-        {
-            if (_dmg > unit.Life)
-            {
-                unit.Attacked(0);
-                unit.Die();
-                return;
-            }
-            unit.Attacked(Math.Max(unit.Life - (_dmg - unit.Armor), 0));
-        }
+        public uint Dmg => _dmg;
+        
 
     }
 }

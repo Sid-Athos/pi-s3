@@ -32,6 +32,11 @@ namespace LastBastion.Model
 
         public uint Rank => _rank;
 
+        public uint Dmg => _dmg;
+
+        public uint Cooldown => _aaCooldown;
+
+
         public int AvailableSlots => _slots.Length;
 
         public void IncDamage()
