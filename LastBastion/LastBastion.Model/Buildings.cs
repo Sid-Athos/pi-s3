@@ -11,20 +11,16 @@ namespace LastBastion.Model
         uint _lifePoints;
         uint _maxLifePoints;
         static uint _count;
-        uint _dmg;
         uint _armor;
-        uint _aaCooldown;
         uint _rank;
 
-        public Buildings(float posX, float posY, uint lifePoints, uint dmg, uint armor, uint attackCooldown, uint rank)
+        public Buildings(float posX, float posY, uint lifePoints,  uint armor,  uint rank)
         {
             _posX = posX;
             _posY = posY;
             _lifePoints = lifePoints;
             _maxLifePoints = lifePoints;
-            _dmg = dmg;
             _armor = armor;
-            _aaCooldown = attackCooldown;
             _rank = rank;
             _count++;
         }

@@ -9,6 +9,8 @@ namespace LastBastion.Model
 
         Villagers [] _slots;
         uint _rank = 1;
+        uint _dmg;
+        uint _aaCooldown;
 
         public Towers(float posX,
         float posY,
@@ -20,17 +22,22 @@ namespace LastBastion.Model
             :base( posX,
          posY,
          lifePoints,
-         dmg,
          armor,
-         aaCooldown,
          rank)
         {
             _slots = new Villagers[2];
+            _dmg = dmg;
+            _aaCooldown = aaCooldown;
         }
 
         public uint Rank => _rank;
 
         public int AvailableSlots => _slots.Length;
+
+        public void IncDamage()
+        {
+            _dmg *= 2;
+        }
 
         public void Upgrade()
         {
@@ -57,6 +64,16 @@ namespace LastBastion.Model
                 _slots.SetValue(u,ShowArchers());
                 u.JoinTower(); 
             }
+        }
+        public void Attack(Units unit)
+        {
+            if (_dmg > unit.Life)
+            {
+                unit.Attacked(0);
+                unit.Die();
+                return;
+            }
+            unit.Attacked(Math.Max(unit.Life - (_dmg - unit.Armor), 0));
         }
 
         public uint ShowArchers()
