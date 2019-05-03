@@ -4,73 +4,41 @@ using System.Text;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
-//{}
+
 namespace LastBastion.UI
 {
     class WindowRenderer
     {
-        RenderWindow _window;
+        Game _game;
 
-        Map _map;
-        string _title;
+        RenderWindow _window;
 
         ViewRenderer _view0;
 
-        Dictionary<Styles, bool> _styles;
-
-        public WindowRenderer(uint height, uint width, string title)
+        public WindowRenderer(Game game)
         {
-            _window = new RenderWindow(new VideoMode(1000, 1000), title, Styles.Default);
-            //SetDStyles();
-            _map = new Map(this);
+            _game = game;
+            _window = new RenderWindow(new VideoMode(1000, 1000), "LastBastion" , Styles.Default);
             _view0 = NewView();
         }
 
-        public ViewRenderer NewView()
-        {
-            ViewRenderer newV = new ViewRenderer(this,1f,1f,_map.MapWidth(),_map.MapHeight());
-            return newV;
-        }
+        public ViewRenderer NewView() => new ViewRenderer(this);
+        public Game GetGame { get { return _game; } }
+        public RenderWindow Render { get { return _window; } }
+        public ViewRenderer GetView { get { return _view0; } }
 
-        public Map GetMap
+        public void PrintCursor()
         {
-            get { return _map; }
+            _game.Sprites.GetSprite("Cursor").Position = _game.CursorPosition;
+            _window.Draw(_game.Sprites.GetSprite("Cursor"));
+            /*
+            _game.Sprites.GetSprite("CursorFont").Color = new Color(255, 255, 255, 128);
+            _game.Sprites.GetSprite("CursorFont").Position = _game.CursorPosition;
+            _game.Sprites.GetSprite("CursorBoard").Position = _window.View.Center;
+            _window.Draw(_game.Sprites.GetSprite("CursorFont"));
+            _window.Draw(_game.Sprites.GetSprite("CursorBoard"));
+            */
         }
-        public RenderWindow GetWindow
-        {
-            get { return _window; }
-        }
-        public ViewRenderer GetViewRenderer
-        {
-            get { return _view0; }
-        }
-
-        /*
-        public void SetDStyles()
-        {
-            _styles = new Dictionary<Styles, bool>();
-            _styles.Add(Styles.Close, false);
-            _styles.Add(Styles.Default, false);
-            _styles.Add(Styles.Fullscreen, false);
-            _styles.Add(Styles.None, false);
-            _styles.Add(Styles.Resize, false);
-            _styles.Add(Styles.Titlebar, false);
-        }
-
-        public void AddStyles(Styles style)
-        {
-            foreach (var item in _styles)
-            {
-                if (item.Key == style)
-                {
-                    if (item.Value == false)
-                    {
-                        _styles.Add(style,true);
-                    }
-                }
-            }
-        }
-        */
     }
 }
 

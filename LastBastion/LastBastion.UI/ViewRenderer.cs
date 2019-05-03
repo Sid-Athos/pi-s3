@@ -12,85 +12,60 @@ namespace LastBastion.UI
         WindowRenderer _window;
         View _view;
 
-        Vector2f _dim;
-        Vector2i _pos;
+        int _x;
+        int _y;
 
-        float _XDim;
-        float _YDim;
-        int _XPos;
-        int _YPos;
-
-        public ViewRenderer(WindowRenderer window,float Xdim, float Ydim, float XPos, float YPos)
+        public ViewRenderer(WindowRenderer window)
         {
             _window = window;
             _view = new View(new Vector2f(100, 100), new Vector2f(200, 200));
-            _XDim = 200;
-            _YDim = 200;
 
-            _pos = new Vector2i(_XPos, _YPos);
-            _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
-            _XPos = 0;
-            _YPos = 0;
-
-            _dim = new Vector2f(_XDim, _YDim);
-            Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
+            _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(0,0)].GetVecHut;
+            _x = 0;
+            _y = 0;
+            //Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(0, 0)].GetName);
         }
-        public View GetView => _view;
+        public View Render => _view;
         public void ViewUp()
         {
-            if (_window.GetMap.GetGrid().ContainsKey(new Vector2i(_XPos, _YPos -1)))
+            if (_window.GetGame.GetMap.GetGrid.ContainsKey(new Vector2i(_x, _y -1)))
             {
-                _YPos -= 1;
-                _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
-                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
+                _y -= 1;
+                _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewDown()
         {
-            if (_window.GetMap.GetGrid().ContainsKey(new Vector2i(_XPos, _YPos + 1)))
+            if (_window.GetGame.GetMap.GetGrid.ContainsKey(new Vector2i(_x, _y + 1)))
             {
-                _YPos += 1;
-                _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
-                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
+                _y += 1;
+                _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewRight()
         {
-            if (_window.GetMap.GetGrid().ContainsKey(new Vector2i(_XPos + 1, _YPos)))
+            if (_window.GetGame.GetMap.GetGrid.ContainsKey(new Vector2i(_x + 1, _y)))
             {
-                _XPos += 1;
-                _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
-                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
+                _x += 1;
+                _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void ViewLeft()
         {
-            if (_window.GetMap.GetGrid().ContainsKey(new Vector2i(_XPos - 1, _YPos)))
+            if (_window.GetGame.GetMap.GetGrid.ContainsKey(new Vector2i(_x - 1, _y)))
             {
-                _XPos -= 1;
-                _pos = new Vector2i(_XPos, _YPos);
-                _view.Center = _window.GetMap.GetGrid()[_pos].GetVecHut;
-                Console.WriteLine(_window.GetMap.GetGrid()[_pos].GetName);
+                _x -= 1;
+                _view.Center = _window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetVecHut;
+                Console.WriteLine(_window.GetGame.GetMap.GetGrid[new Vector2i(_x, _y)].GetName);
             }
         }
         public void zoom()
         {
-            _XDim += 20;
-            _YDim += 20;
-            _dim = new Vector2f(_XDim,_YDim);
-            _view.Size = _dim;
+            _view.Size = new Vector2f(_view.Size.X + 20, _view.Size.Y +20);
         }
-        public void dezoom()
-        {
-            _XDim -= 20;
-            _YDim -= 20;
-            _dim = new Vector2f(_XDim, _YDim);
-            _view.Size = _dim;
-        }
-        public Vector2i GetPos => _pos;
-        public Vector2f GetDim => _dim;
+        public void dezoom() { _view.Size = new Vector2f(_view.Size.X - 20, _view.Size.Y - 20); }
     }
 }
