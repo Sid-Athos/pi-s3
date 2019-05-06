@@ -41,11 +41,13 @@ namespace LastBastion.UI
             {
                 if (_game.GetTimer >= 180)
                 {
+                    _game.Sprites.GetSprite("TileWinter").Scale = new Vector2f(_game.Sprites.GetSprite("TileWinter").Scale.X, _game.Sprites.GetSprite("TileWinter").Scale.Y);
                     _game.Sprites.GetSprite("TileWinter").Position = item.Value.GetVecHut;
                     _game.GetWindow.Render.Draw(_game.Sprites.GetSprite("TileWinter"));
                 }
                 else
                 {
+                    _game.Sprites.GetSprite("Tile").Scale = new Vector2f(_game.Sprites.GetSprite("Tile").Scale.X, _game.Sprites.GetSprite("Tile").Scale.Y);
                     _game.Sprites.GetSprite("Tile").Position = item.Value.GetVecHut;
                     _game.GetWindow.Render.Draw(_game.Sprites.GetSprite("Tile"));
                 }

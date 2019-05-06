@@ -493,6 +493,20 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "LastBastion.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "ITI.SFML.Audio": "0.2.0",
+          "ITI.SFML.Graphics": "0.2.0"
+        },
+        "compile": {
+          "bin/placeholder/LastBastion.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LastBastion.Model.dll": {}
+        }
       }
     }
   },
@@ -1087,12 +1101,18 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "LastBastion.Model/1.0.0": {
+      "type": "project",
+      "path": "../LastBastion.Model/LastBastion.Model.csproj",
+      "msbuildProject": "../LastBastion.Model/LastBastion.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "ITI.SFML.Audio >= 0.2.0",
       "ITI.SFML.Graphics >= 0.2.0",
+      "LastBastion.Model >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -1126,7 +1146,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj": {
+              "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

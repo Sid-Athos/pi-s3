@@ -25,10 +25,12 @@ namespace LastBastion.UI
             _posG = posG;
             _pos = pos;
             _building = "Empty";
+            _name = name;
         }
         public Vector2i GetVector { get { return _posG; } }
         public Vector2f GetVecHut{get { return _pos; }}
         public String GetName{get { return _building; }}
+        public String StringVec => _name;
         public bool IsBusy()
         {
             if (_building != "Empty")

@@ -4,6 +4,7 @@ using System.Text;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using LastBastion.Model;
 //{}
 //[]
 namespace LastBastion.UI
@@ -42,14 +43,18 @@ namespace LastBastion.UI
             _countTimer = 300;
             _sec = DateTime.Now.Second;
             _pause = true;
+
             _input = new Input(this);
             _map = new Map(this);
             _window = new WindowRenderer(this);
-            _window.Render.SetMouseCursorVisible(false);
+            _window.Render.SetMouseCursorVisible(true);
 
             _window.Render.KeyPressed += _input.IsKeyPressed;
             _window.Render.MouseMoved += MoveCursor;
             
+            //_cursorPosition = new Vector2f(_map.GetGrid[new Vector2i(0, 0)].GetVecHut.X, (_map.GetGrid[new Vector2i(0, 0)].GetVecHut.Y));
+            
+
             Gameloop();
         }
 
@@ -60,11 +65,11 @@ namespace LastBastion.UI
                 _window.Render.DispatchEvents();
                 _window.Render.Clear();
 
-                
                 if (_pause)
                 {
                     TimerUpdate();
                 }
+                //Mouse.SetPosition(new Vector2i((int)_cursorPosition.X,(int)_cursorPosition.Y));
                 _map.PrintMap(50, 50);
                 _map.GetVillage.DrawCastle();
                 _map.GetVillage.DrawBuilding();
@@ -90,7 +95,7 @@ namespace LastBastion.UI
         
         public void MoveCursor(object sender, MouseMoveEventArgs e)
         {
-            _cursorPosition = new Vector2f((float)e.X,(float)e.Y);
+            _cursorPosition = new Vector2f((float)e.X, (float)e.Y);
         }
 
         public void TimerUpdate()
@@ -100,7 +105,6 @@ namespace LastBastion.UI
                 _sec = 1;
                 _countTimer += 2;
                 MinutePass = false;
-                Console.WriteLine(_countTimer);
             }
             else
             {
@@ -108,7 +112,6 @@ namespace LastBastion.UI
                 {
                     _sec = DateTime.Now.Second;
                     _countTimer++;
-                    Console.WriteLine(_countTimer);
                 }
                 if (DateTime.Now.Second == 2 && MinutePass == false)
                 {

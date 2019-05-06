@@ -22,6 +22,22 @@ namespace LastBastion.UI
             {
                 _game.Pause();
             }
+            if (e.Code == Keyboard.Key.Z)
+            {
+                _game.GetWindow.GetView.ViewUp();
+            }
+            if (e.Code == Keyboard.Key.Q)
+            {
+                _game.GetWindow.GetView.ViewLeft();
+            }
+            if (e.Code == Keyboard.Key.S)
+            {
+                _game.GetWindow.GetView.ViewDown();
+            }
+            if (e.Code == Keyboard.Key.D)
+            {
+                _game.GetWindow.GetView.ViewRight();
+            }
             if (!_game.IsStop)
             {
                 switch (e.Code)
@@ -174,22 +190,6 @@ namespace LastBastion.UI
                     case Keyboard.Key.Multiply:
                         break;
                     case Keyboard.Key.Divide:
-                        break;
-                    case Keyboard.Key.Left:
-                    case Keyboard.Key.Q:
-                        _game.GetWindow.GetView.ViewLeft();
-                        break;
-                    case Keyboard.Key.Right:
-                    case Keyboard.Key.D:
-                        _game.GetWindow.GetView.ViewRight();
-                        break;
-                    case Keyboard.Key.Up:
-                    case Keyboard.Key.Z:
-                        _game.GetWindow.GetView.ViewUp();
-                        break;
-                    case Keyboard.Key.Down:
-                    case Keyboard.Key.S:
-                        _game.GetWindow.GetView.ViewDown();
                         break;
                     case Keyboard.Key.F1:
                         break;

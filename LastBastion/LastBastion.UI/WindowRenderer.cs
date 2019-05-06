@@ -18,7 +18,7 @@ namespace LastBastion.UI
         public WindowRenderer(Game game)
         {
             _game = game;
-            _window = new RenderWindow(new VideoMode(1000, 1000), "LastBastion" , Styles.Default);
+            _window = new RenderWindow(new VideoMode(1500, 1500), "LastBastion" , Styles.Default);
             _view0 = NewView();
         }
 
@@ -29,15 +29,15 @@ namespace LastBastion.UI
 
         public void PrintCursor()
         {
+            /*
             _game.Sprites.GetSprite("Cursor").Position = _game.CursorPosition;
             _window.Draw(_game.Sprites.GetSprite("Cursor"));
-            /*
+            */
             _game.Sprites.GetSprite("CursorFont").Color = new Color(255, 255, 255, 128);
             _game.Sprites.GetSprite("CursorFont").Position = _game.CursorPosition;
             _game.Sprites.GetSprite("CursorBoard").Position = _window.View.Center;
             _window.Draw(_game.Sprites.GetSprite("CursorFont"));
             _window.Draw(_game.Sprites.GetSprite("CursorBoard"));
-            */
         }
     }
 }
