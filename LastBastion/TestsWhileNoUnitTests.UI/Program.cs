@@ -7,8 +7,8 @@ namespace TestsWhileNoUnitTests.UI
     {
         static void Main(string[] args)
         {
-            Villagers sid = new Villagers(false, 10.5f, 11.6f, "Villageois", 25, 5, 0,false, 3, 0.2f);
-            Villagers feras = new Villagers(false, 10.5f, 11.6f, "Villageois", 25, 5, 1, false, 3, 0.2f);
+            Villagers sid = new Villagers(false, 10.5, 11.6, "Villageois", 25, 5, 0,false, 3, 0.2);
+            Villagers feras = new Villagers(false, 10.5, 11.6, "Villageois", 25, 5, 1, false, 3, 0.2);
 
             if(sid != null)
             {
@@ -40,6 +40,10 @@ namespace TestsWhileNoUnitTests.UI
             hugo.Attack(sid);
             hugo.Attack(sid);
             hugo.Attack(sid);
+            var vect = sid.Position();
+
+            Console.WriteLine("L'unité Sid est placée en position : {0} {1}!", vect.PosX, vect.PosY);
+
 
             Console.WriteLine("La tour dispose de {0} emplacement(s) pour des soldats.", hugo.AvailableSlots);
 

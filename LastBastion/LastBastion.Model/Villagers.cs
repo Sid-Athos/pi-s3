@@ -9,9 +9,9 @@ namespace LastBastion.Model
         uint _harvestCooldown = 3;
 
 
-        public Villagers(bool flying, float posX, float posY,
+        public Villagers(bool flying, double posX, double posY,
             string job, uint lifePoints, uint dmg, uint armor, bool isMoving,
-            uint attackCooldown, float speed)
+            uint attackCooldown, double speed)
             :base(flying, posX,posY,
             job, lifePoints, dmg, armor, isMoving,
             attackCooldown,speed)

@@ -45,9 +45,5 @@ namespace LastBastion.Model
         public uint MaxLife => _maxLifePoints;
 
         public uint Life => _lifePoints;
-
-        public uint Dmg => _dmg;
-        
-
     }
 }

@@ -6,8 +6,7 @@ namespace LastBastion.Model
     public class Units : IDisposable
     {
         //Map _context;
-        float _posX;
-        float _posY;
+        Vectors _position;
         public bool _flying;
         readonly string _job;
         uint _lifePoints;
@@ -16,20 +15,21 @@ namespace LastBastion.Model
         readonly uint _armor;
         bool _isMoving;
         uint _aaCooldown;
-        float _speed;
+        double _speed;
         bool _inTower = false;
         static List<Villagers> _villagePeople = new List<Villagers>();
         static List<Barbars> _barbarians = new List<Barbars>();
-        public bool _burned = false;
-        public bool _paralyzed = false;
+        bool _burned = false;
+        bool _paralyzed = false;
+        bool _isSpawnable = true;
 
-        public Units(bool flying, float posX, float posY, 
+
+        public Units(bool flying, double posX, double posY, 
             string job, uint lifePoints, uint dmg, uint armor, bool isMoving, 
-            uint attackCooldown, float speed)
+            uint attackCooldown, double speed)
         {
             _flying = flying;
-            _posX = posX;
-            _posY = posY;
+            _position = new Vectors(posX, posY);
             _job = job;
             _lifePoints = lifePoints;
             _maxLifePoints = lifePoints;
@@ -38,6 +38,11 @@ namespace LastBastion.Model
             _isMoving = isMoving;
             _aaCooldown = attackCooldown;
             _speed = speed;
+        }
+
+        public Vectors Position()
+        {
+            return _position;
         }
 
         public void Attack(Units unit)
@@ -136,5 +141,12 @@ namespace LastBastion.Model
             // GC.SuppressFinalize(this);
         }
 
+
+        public void Spawn(double x, double y)
+        {
+            Vectors actualPos = Position();
+            actualPos.PosX = x;
+            actualPos.PosY = y;
+        }
     }
 }
