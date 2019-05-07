@@ -7,6 +7,7 @@ namespace LastBastion.Model
     public class Market : Buildings
     {
         uint _foodProduction;
+        uint _rank = 1;
 
         public Market(float posX, float posY, uint lifePoints, uint armor, uint rank, uint foodProduction)
             : base(posX, posY, lifePoints, armor, rank)
@@ -14,9 +15,23 @@ namespace LastBastion.Model
             _foodProduction = foodProduction;
         }
 
+        public uint Rank => _rank;
+
         public void IncFoodProd()
         {
             _foodProduction += 2;
+        }
+
+        public void Upgrade ()
+        {
+            if(_rank < 3)
+            {
+                _rank++;
+                IncFoodProd();
+                IncHealth();
+                IncreaseArmor();
+            }
+
         }
 
         public uint FoodProduction

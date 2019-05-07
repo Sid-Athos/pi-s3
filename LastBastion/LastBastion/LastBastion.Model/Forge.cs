@@ -4,15 +4,14 @@ using System.Text;
 
 namespace LastBastion.Model
 {
-    public class Sawmill : Buildings
+    public class Forge : Buildings
     {
-        uint _woodProduction;
         uint _rank = 1;
 
-        public Sawmill (float posX, float posY, uint lifePoints, uint armor, uint rank, uint woodProduction)
+        public Forge(float posX, float posY, uint lifePoints, uint armor, uint rank)
             : base(posX, posY, lifePoints, armor, rank)
         {
-            _woodProduction = woodProduction;
+
         }
 
         public uint Rank => _rank;
@@ -22,21 +21,20 @@ namespace LastBastion.Model
             if(_rank < 3)
             {
                 _rank++;
-                IncWoodProd();
                 IncHealth();
                 IncreaseArmor();
             }
         }
 
-        public void IncWoodProd()
+        public void IncUnitArmor()
         {
-            _woodProduction += 2;
+            
         }
 
-        public uint WoodProduction
+        public void IncUnitDmg()
         {
-            get { return _woodProduction; }
-            set { _woodProduction = value; }
+
         }
+
     }
 }
