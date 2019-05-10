@@ -1,0 +1,15 @@
+D:\Documents\PROJET_C#\LastBastion\Interface\bin\Debug\netcoreapp2.1\Interface.deps.json
+D:\Documents\PROJET_C#\LastBastion\Interface\bin\Debug\netcoreapp2.1\Interface.dll
+D:\Documents\PROJET_C#\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.csprojAssemblyReference.cache
+D:\Documents\PROJET_C#\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.csproj.CoreCompileInputs.cache
+D:\Documents\PROJET_C#\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.AssemblyInfoInputs.cache
+D:\Documents\PROJET_C#\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.AssemblyInfo.cs
+C:\Users\Rosiek\Desktop\LastBastion\Interface\bin\Debug\netcoreapp2.1\Interface.deps.json
+C:\Users\Rosiek\Desktop\LastBastion\Interface\bin\Debug\netcoreapp2.1\Interface.dll
+C:\Users\Rosiek\Desktop\LastBastion\Interface\bin\Debug\netcoreapp2.1\Interface.pdb
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.csprojAssemblyReference.cache
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.csproj.CoreCompileInputs.cache
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.AssemblyInfoInputs.cache
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.AssemblyInfo.cs
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.dll
+C:\Users\Rosiek\Desktop\LastBastion\Interface\obj\Debug\netcoreapp2.1\Interface.pdb
