@@ -493,20 +493,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "LastBastion.Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "ITI.SFML.Audio": "0.2.0",
-          "ITI.SFML.Graphics": "0.2.0"
-        },
-        "compile": {
-          "bin/placeholder/LastBastion.Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LastBastion.Model.dll": {}
-        }
       }
     }
   },
@@ -1101,18 +1087,12 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "LastBastion.Model/1.0.0": {
-      "type": "project",
-      "path": "../LastBastion.Model/LastBastion.Model.csproj",
-      "msbuildProject": "../LastBastion.Model/LastBastion.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "ITI.SFML.Audio >= 0.2.0",
       "ITI.SFML.Graphics >= 0.2.0",
-      "LastBastion.Model >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -1123,9 +1103,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
-      "projectName": "LastBastion.UI",
-      "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.UI.csproj",
+      "projectUniqueName": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.Model.csproj",
+      "projectName": "LastBastion.Model",
+      "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.UI\\LastBastion.Model.csproj",
       "packagesPath": "C:\\Users\\Rosiek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.UI\\obj\\",
       "projectStyle": "PackageReference",
@@ -1141,16 +1121,12 @@
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/intechinfo-release/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj": {
-              "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

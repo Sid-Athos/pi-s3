@@ -356,10 +356,20 @@
       "LastBastion.Model/1.0.0": {
         "dependencies": {
           "ITI.SFML.Audio": "0.2.0",
-          "ITI.SFML.Graphics": "0.2.0"
+          "ITI.SFML.Graphics": "0.2.0",
+          "LastBastion.UI": "1.0.0"
         },
         "runtime": {
           "LastBastion.Model.dll": {}
+        }
+      },
+      "LastBastion.UI/1.0.0": {
+        "dependencies": {
+          "ITI.SFML.Audio": "0.2.0",
+          "ITI.SFML.Graphics": "0.2.0"
+        },
+        "runtime": {
+          "LastBastion.UI.dll": {}
         }
       }
     }
@@ -406,6 +416,11 @@
       "hashPath": "iti.sfml.window.0.2.0.nupkg.sha512"
     },
     "LastBastion.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LastBastion.UI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

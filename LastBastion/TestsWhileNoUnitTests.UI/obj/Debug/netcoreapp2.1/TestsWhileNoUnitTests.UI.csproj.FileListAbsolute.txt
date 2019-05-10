@@ -40,3 +40,5 @@ C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.dll
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.pdb
 C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\obj\Debug\netcoreapp2.1\TestsWhileNoUnitTests.UI.csprojAssemblyReference.cache
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.dll
+C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\TestsWhileNoUnitTests.UI\bin\Debug\netcoreapp2.1\LastBastion.UI.pdb

@@ -1103,9 +1103,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
-      "projectName": "LastBastion.Model",
-      "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.Model.csproj",
+      "projectUniqueName": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.UI.csproj",
+      "projectName": "LastBastion.UI",
+      "projectPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\LastBastion.UI.csproj",
       "packagesPath": "C:\\Users\\Rosiek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Rosiek\\Documents\\C_Sharp\\pi-s3\\LastBastion\\LastBastion.Model\\obj\\",
       "projectStyle": "PackageReference",
@@ -1121,8 +1121,8 @@
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/intechinfo-release/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {

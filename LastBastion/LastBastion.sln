@@ -3,12 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LastBastion.UI", "LastBastion.UI\LastBastion.UI.csproj", "{9AA5D982-BDBE-4794-822E-B578B6F7E3F8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{32397693-69A4-4B98-9933-FBCF472D7639} = {32397693-69A4-4B98-9933-FBCF472D7639}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LastBastion.Model", "LastBastion.UI\LastBastion.Model.csproj", "{9AA5D982-BDBE-4794-822E-B578B6F7E3F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LastBastion.Model", "LastBastion.Model\LastBastion.Model.csproj", "{32397693-69A4-4B98-9933-FBCF472D7639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LastBastion.UI", "LastBastion.Model\LastBastion.UI.csproj", "{32397693-69A4-4B98-9933-FBCF472D7639}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F92C22F-FD8C-4DE5-A5DD-D8DD0B56C579}"
 	ProjectSection(SolutionItems) = preProject
