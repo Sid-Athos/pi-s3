@@ -1,4 +1,0 @@
-C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.UI.csprojAssemblyReference.cache
-C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.UI.csproj.CoreCompileInputs.cache
-C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.UI.AssemblyInfoInputs.cache
-C:\Users\Rosiek\Documents\C_Sharp\pi-s3\LastBastion\LastBastion.Model\obj\Debug\netcoreapp2.1\LastBastion.UI.AssemblyInfo.cs
